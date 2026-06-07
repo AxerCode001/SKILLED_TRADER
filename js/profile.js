@@ -7,6 +7,61 @@ document.addEventListener("DOMContentLoaded", () => {
   const profileForm =
     document.getElementById("profileForm");
 
+  const profileName = document.getElementById('profileName');
+  const profileEmail = document.getElementById('profileEmail');
+  const profileFullName = document.getElementById('profileFullName');
+  const profilePhone = document.getElementById('profilePhone');
+  const profileCity = document.getElementById('profileCity');
+  const profileLearningLevel = document.getElementById('profileLearningLevel');
+  const profileGoal = document.getElementById('profileGoal');
+  const profileAvatar = document.querySelector('.profile-avatar');
+  const profileSubtitle = document.getElementById('profileSubtitle');
+
+  const populateProfile = (user) => {
+    if (!user) return;
+    const name = user.name || 'Your Name';
+    const email = user.email || '';
+    profileName.textContent = name;
+    profileFullName.value = name;
+    profileEmail.value = email;
+    if (profileAvatar) profileAvatar.textContent = name.charAt(0).toUpperCase();
+    if (profileSubtitle) profileSubtitle.textContent = `${user.role || 'Student'} · SkilledTrader Academy`;
+  };
+
+  const loadProfile = async () => {
+    const token = localStorage.getItem('token');
+    const localUser = localStorage.getItem('user');
+    if (localUser) {
+      try {
+        populateProfile(JSON.parse(localUser));
+      } catch (err) {
+        console.error('Invalid local user data', err);
+      }
+    }
+    if (!token) {
+      window.location.href = 'login.html';
+      return;
+    }
+    try {
+      const res = await fetch('/api/auth/me', {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      if (!res.ok) {
+        window.location.href = 'login.html';
+        return;
+      }
+      const body = await res.json();
+      if (body && body.data) {
+        populateProfile(body.data);
+        localStorage.setItem('user', JSON.stringify(body.data));
+      }
+    } catch (err) {
+      console.error('Profile load error', err);
+    }
+  };
+
+  loadProfile();
+
   if(profileForm){
 
     profileForm.addEventListener("submit", (e) => {

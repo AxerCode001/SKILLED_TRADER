@@ -1,5 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+  // Load user info and update welcome/user pill
+  async function loadUser() {
+    try {
+      const token = localStorage.getItem('token');
+      if (!token) return;
+      const res = await fetch('/api/auth/me', {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      if (!res.ok) return;
+      const body = await res.json();
+      if (body && body.data) {
+        const name = body.data.name || 'User';
+        const h = document.getElementById('welcomeHeader');
+        if (h) h.textContent = `Welcome back, ${name} 👋`;
+        const initial = document.getElementById('userInitial');
+        const uname = document.getElementById('userName');
+        if (initial) initial.textContent = name.charAt(0).toUpperCase();
+        if (uname) uname.textContent = name;
+      }
+    } catch (err) {
+      console.error('Failed to load user', err);
+    }
+  }
+
+  loadUser();
+
   /* =========================================
      LOGOUT
   ========================================= */
@@ -7,6 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
   window.logout = function(){
 
     localStorage.removeItem("loggedIn");
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
 
     window.location.href = "login.html";
 
