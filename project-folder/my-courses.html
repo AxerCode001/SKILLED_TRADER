@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Courses | SkilledTrader</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/my-courses.css">
+
+</head>
+<body>
+
+<div class="courses-page">
+
+  <!-- HEADER -->
+
+  <header class="courses-header">
+
+    <div>
+
+      <p class="eyebrow">
+        Student Portal
+      </p>
+
+      <h1>
+        My Courses
+      </h1>
+
+      <span>
+        Track your learning journey and continue where you left off.
+      </span>
+
+    </div>
+
+    <a href="dashboard.html" class="back-btn">
+      ← Dashboard
+    </a>
+
+  </header>
+
+  <!-- STATS -->
+
+  <section class="course-stats">
+
+    <div class="stat-card">
+
+      <h2>4</h2>
+
+      <p>Total Courses</p>
+
+    </div>
+
+    <div class="stat-card">
+
+      <h2>2</h2>
+
+      <p>Completed</p>
+
+    </div>
+
+    <div class="stat-card">
+
+      <h2>2</h2>
+
+      <p>In Progress</p>
+
+    </div>
+
+    <div class="stat-card">
+
+      <h2>65%</h2>
+
+      <p>Average Progress</p>
+
+    </div>
+
+  </section>
+
+  <!-- SEARCH -->
+
+  <section class="search-section">
+
+    <input
+      type="text"
+      id="courseSearch"
+      placeholder="Search your course..."
+    >
+
+    <div class="filter-buttons">
+
+      <button class="filter-btn active">
+        All
+      </button>
+
+      <button class="filter-btn">
+        Active
+      </button>
+
+      <button class="filter-btn">
+        Completed
+      </button>
+
+      <button class="filter-btn">
+        Locked
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- COURSES GRID -->
+
+  <section class="courses-grid">
+
+    <!-- COURSE 1 -->
+
+    <div
+      class="course-card active-course"
+      data-status="active"
+    >
+
+      <div class="course-banner green">
+
+        FOUNDATION PROGRAM
+
+      </div>
+
+      <div class="course-content">
+
+        <div class="course-tag">
+          Active
+        </div>
+
+        <h3>
+          Foundation Program
+        </h3>
+
+        <p>
+          Learn stock market fundamentals,
+          risk management and technical analysis.
+        </p>
+
+        <div class="progress-track">
+
+          <span style="width:65%"></span>
+
+        </div>
+
+        <div class="progress-row">
+
+          <small>65% Complete</small>
+
+          <strong>
+            Module 4 / 8
+          </strong>
+
+        </div>
+
+        <a
+          href="foundation-program.html"
+          class="continue-btn"
+        >
+          Continue Learning
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- COURSE 2 -->
+
+    <div
+      class="course-card active-course"
+      data-status="active"
+    >
+
+      <div class="course-banner blue">
+
+        TECHNICAL ANALYSIS
+
+      </div>
+
+      <div class="course-content">
+
+        <div class="course-tag">
+          Active
+        </div>
+
+        <h3>
+          Technical Analysis
+        </h3>
+
+        <p>
+          Candlesticks, support resistance,
+          trendlines and chart reading.
+        </p>
+
+        <div class="progress-track">
+
+          <span style="width:35%"></span>
+
+        </div>
+
+        <div class="progress-row">
+
+          <small>35% Complete</small>
+
+          <strong>
+            Module 2 / 8
+          </strong>
+
+        </div>
+
+        <a
+          href="technical.html"
+          class="continue-btn"
+        >
+          Continue Learning
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- COURSE 3 -->
+
+    <div
+      class="course-card completed-course"
+      data-status="completed"
+    >
+
+      <div class="course-banner purple">
+
+        FUNDAMENTAL ANALYSIS
+
+      </div>
+
+      <div class="course-content">
+
+        <div class="course-tag completed">
+          Completed
+        </div>
+
+        <h3>
+          Fundamental Analysis
+        </h3>
+
+        <p>
+          Company valuation,
+          financial statements and ratios.
+        </p>
+
+        <div class="progress-track">
+
+          <span style="width:100%"></span>
+
+        </div>
+
+        <div class="progress-row">
+
+          <small>100% Complete</small>
+
+          <strong>
+            Completed
+          </strong>
+
+        </div>
+
+        <a
+          href="certificates.html"
+          class="certificate-btn"
+        >
+          View Certificate
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- COURSE 4 -->
+
+    <div
+      class="course-card locked-course"
+      data-status="locked"
+    >
+
+      <div class="course-banner orange">
+
+        RISK MANAGEMENT
+
+      </div>
+
+      <div class="course-content">
+
+        <div class="course-tag locked">
+          Locked
+        </div>
+
+        <h3>
+          Risk Management
+        </h3>
+
+        <p>
+          Unlock after completing
+          Foundation Program.
+        </p>
+
+        <div class="lock-area">
+
+          🔒 Locked Course
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- LEARNING INSIGHT -->
+
+  <section class="learning-insight">
+
+    <div class="insight-card">
+
+      <h2>
+        📈 Learning Insight
+      </h2>
+
+      <p>
+
+        Your learning trend is currently
+        <strong>Bullish</strong>.
+
+        You completed more lessons this week
+        than your average study target.
+
+      </p>
+
+    </div>
+
+  </section>
+
+</div>
+
+<script src="/js/my-courses.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Foundation Program — SkilledTrader</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/foundation-program.css">
+</head>
+<body>
+
+<nav id="nav">
+
+  <a class="nav-logo" href="index.html">
+    <div class="nav-logo-mark">ST</div>
+    <span class="nav-logo-text">Skilled<span>Trader</span></span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="courses.html" class="nav-cta">All Courses</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger">
+    ☰
+  </button>
+
+</nav>
+
+<main class="foundation-page">
+
+  <section class="foundation-player-section">
+
+    <div class="foundation-player-grid">
+
+      <div class="video-area">
+
+        <div class="course-label">
+          <span></span>
+          Premium Program · Foundation Level
+        </div>
+
+        <h1>
+          Foundation <span>Program</span>
+        </h1>
+
+        <p class="course-subtitle">
+          Build your stock market foundation with structured lessons,
+          assignments, risk management, chart reading, and trading psychology.
+        </p>
+
+        <div class="main-video-card">
+
+          <div class="video-topbar">
+            <span id="nowPlaying">Now Playing</span>
+            <small id="lessonMeta">Module 01 · Chapter 01</small>
+          </div>
+
+          <div class="video-box">
+            <video
+              id="courseVideo"
+              controls
+              controlsList="nodownload"
+              preload="metadata"
+              poster="/images/foundation-thumbnail.jpg"
+            >
+              <source src="/videos/foundation/module-01-chapter-01.mp4" type="video/mp4">
+              Your browser does not support video playback.
+            </video>
+          </div>
+
+        </div>
+
+        <div class="lesson-details">
+
+          <div>
+            <div class="sec-eyebrow">Current Lesson</div>
+
+            <h2 id="lessonTitle">
+              What is Stock Market?
+            </h2>
+
+            <p id="lessonDescription">
+              Understand what the stock market is, why companies list shares,
+              how buyers and sellers participate, and why beginners need a
+              structured learning path.
+            </p>
+          </div>
+
+          <button class="mark-complete-btn">
+            Mark Chapter as Complete
+          </button>
+
+        </div>
+
+      </div>
+
+      <aside class="course-sidebar">
+
+        <div class="progress-box">
+
+          <div class="progress-top">
+            <span>Your Progress</span>
+            <strong id="progressPercent">0%</strong>
+          </div>
+
+          <div class="progress-track">
+            <div class="progress-fill"></div>
+          </div>
+
+          <p id="progressText">
+            0 of 32 chapters completed
+          </p>
+
+        </div>
+
+        <div class="modules-box">
+
+          <h3>Course Content</h3>
+
+          <div class="module-group active">
+
+            <button class="module-title">
+              <span>Module 01</span>
+              Market Foundation
+            </button>
+
+            <div class="chapter-items">
+
+              <button class="chapter-item active" data-video="/videos/foundation/module-01-chapter-01.mp4" data-title="What is Stock Market?" data-meta="Module 01 · Chapter 01">
+                <span>▶</span>
+                What is Stock Market?
+              </button>
+
+              <button class="chapter-item" data-video="/videos/foundation/module-01-chapter-02.mp4" data-title="NSE & BSE" data-meta="Module 01 · Chapter 02">
+                <span>○</span>
+                NSE & BSE
+              </button>
+
+              <button class="chapter-item" data-video="/videos/foundation/module-01-chapter-03.mp4" data-title="Market Participants" data-meta="Module 01 · Chapter 03">
+                <span>○</span>
+                Market Participants
+              </button>
+
+              <button class="chapter-item" data-video="/videos/foundation/module-01-chapter-04.mp4" data-title="Equity & Index" data-meta="Module 01 · Chapter 04">
+                <span>○</span>
+                Equity & Index
+              </button>
+
+            </div>
+
+          </div>
+
+          <div class="module-group">
+
+            <button class="module-title">
+              <span>Module 02</span>
+              Trading Foundation
+            </button>
+
+            <div class="chapter-items">
+
+              <button class="chapter-item" data-video="/videos/foundation/module-02-chapter-01.mp4" data-title="Trading vs Investing" data-meta="Module 02 · Chapter 01">
+                <span>○</span>
+                Trading vs Investing
+              </button>
+
+              <button class="chapter-item" data-video="/videos/foundation/module-02-chapter-02.mp4" data-title="Trading Sessions" data-meta="Module 02 · Chapter 02">
+                <span>○</span>
+                Trading Sessions
+              </button>
+
+              <button class="chapter-item" data-video="/videos/foundation/module-02-chapter-03.mp4" data-title="Types of Traders" data-meta="Module 02 · Chapter 03">
+                <span>○</span>
+                Types of Traders
+              </button>
+
+              <button class="chapter-item" data-video="/videos/foundation/module-02-chapter-04.mp4" data-title="Trading Terminology" data-meta="Module 02 · Chapter 04">
+                <span>○</span>
+                Trading Terminology
+              </button>
+
+            </div>
+
+          </div>
+
+          <div class="module-group">
+
+            <button class="module-title">
+              <span>Module 03</span>
+              Chart Reading
+            </button>
+
+            <div class="chapter-items">
+
+              <button class="chapter-item" data-video="/videos/foundation/module-03-chapter-01.mp4" data-title="Chart Types" data-meta="Module 03 · Chapter 01">
+                <span>○</span>
+                Chart Types
+              </button>
+
+              <button class="chapter-item" data-video="/videos/foundation/module-03-chapter-02.mp4" data-title="Timeframes" data-meta="Module 03 · Chapter 02">
+                <span>○</span>
+                Timeframes
+              </button>
+
+              <button class="chapter-item" data-video="/videos/foundation/module-03-chapter-03.mp4" data-title="Candlestick Structure" data-meta="Module 03 · Chapter 03">
+                <span>○</span>
+                Candlestick Structure
+              </button>
+
+              <button class="chapter-item" data-video="/videos/foundation/module-03-chapter-04.mp4" data-title="Price Action Basics" data-meta="Module 03 · Chapter 04">
+                <span>○</span>
+                Price Action Basics
+              </button>
+
+            </div>
+
+          </div>
+
+          <div class="module-group">
+
+            <button class="module-title">
+              <span>Module 04</span>
+              Support & Resistance
+            </button>
+
+            <div class="chapter-items">
+
+              <button class="chapter-item" data-video="/videos/foundation/module-04-chapter-01.mp4" data-title="Support Zones" data-meta="Module 04 · Chapter 01">
+                <span>○</span>
+                Support Zones
+              </button>
+
+              <button class="chapter-item" data-video="/videos/foundation/module-04-chapter-02.mp4" data-title="Resistance Zones" data-meta="Module 04 · Chapter 02">
+                <span>○</span>
+                Resistance Zones
+              </button>
+
+              <button class="chapter-item" data-video="/videos/foundation/module-04-chapter-03.mp4" data-title="Breakouts" data-meta="Module 04 · Chapter 03">
+                <span>○</span>
+                Breakouts
+              </button>
+
+              <button class="chapter-item" data-video="/videos/foundation/module-04-chapter-04.mp4" data-title="Retests" data-meta="Module 04 · Chapter 04">
+                <span>○</span>
+                Retests
+              </button>
+
+            </div>
+
+          </div>
+
+          <div class="module-group">
+
+            <button class="module-title">
+              <span>Module 05</span>
+              Trend Analysis
+            </button>
+
+            <div class="chapter-items">
+
+              <button class="chapter-item" data-video="/videos/foundation/module-05-chapter-01.mp4" data-title="Uptrend" data-meta="Module 05 · Chapter 01">
+                <span>○</span>
+                Uptrend
+              </button>
+
+              <button class="chapter-item" data-video="/videos/foundation/module-05-chapter-02.mp4" data-title="Downtrend" data-meta="Module 05 · Chapter 02">
+                <span>○</span>
+                Downtrend
+              </button>
+
+              <button class="chapter-item" data-video="/videos/foundation/module-05-chapter-03.mp4" data-title="Sideways Market" data-meta="Module 05 · Chapter 03">
+                <span>○</span>
+                Sideways Market
+              </button>
+
+              <button class="chapter-item" data-video="/videos/foundation/module-05-chapter-04.mp4" data-title="Trend Confirmation" data-meta="Module 05 · Chapter 04">
+                <span>○</span>
+                Trend Confirmation
+              </button>
+
+            </div>
+
+          </div>
+
+          <div class="module-group">
+
+            <button class="module-title">
+              <span>Module 06</span>
+              Risk Management
+            </button>
+
+            <div class="chapter-items">
+
+              <button class="chapter-item" data-video="/videos/foundation/module-06-chapter-01.mp4" data-title="Position Sizing" data-meta="Module 06 · Chapter 01">
+                <span>○</span>
+                Position Sizing
+              </button>
+
+              <button class="chapter-item" data-video="/videos/foundation/module-06-chapter-02.mp4" data-title="Stop Loss" data-meta="Module 06 · Chapter 02">
+                <span>○</span>
+                Stop Loss
+              </button>
+
+              <button class="chapter-item" data-video="/videos/foundation/module-06-chapter-03.mp4" data-title="Risk Reward" data-meta="Module 06 · Chapter 03">
+                <span>○</span>
+                Risk Reward
+              </button>
+
+              <button class="chapter-item" data-video="/videos/foundation/module-06-chapter-04.mp4" data-title="Capital Preservation" data-meta="Module 06 · Chapter 04">
+                <span>○</span>
+                Capital Preservation
+              </button>
+
+            </div>
+
+          </div>
+
+          <div class="module-group">
+
+            <button class="module-title">
+              <span>Module 07</span>
+              Trading Psychology
+            </button>
+
+            <div class="chapter-items">
+
+              <button class="chapter-item" data-video="/videos/foundation/module-07-chapter-01.mp4" data-title="Discipline" data-meta="Module 07 · Chapter 01">
+                <span>○</span>
+                Discipline
+              </button>
+
+              <button class="chapter-item" data-video="/videos/foundation/module-07-chapter-02.mp4" data-title="Emotional Control" data-meta="Module 07 · Chapter 02">
+                <span>○</span>
+                Emotional Control
+              </button>
+
+              <button class="chapter-item" data-video="/videos/foundation/module-07-chapter-03.mp4" data-title="Avoiding FOMO" data-meta="Module 07 · Chapter 03">
+                <span>○</span>
+                Avoiding FOMO
+              </button>
+
+              <button class="chapter-item" data-video="/videos/foundation/module-07-chapter-04.mp4" data-title="Trading Routine" data-meta="Module 07 · Chapter 04">
+                <span>○</span>
+                Trading Routine
+              </button>
+
+            </div>
+
+          </div>
+
+          <div class="module-group">
+
+            <button class="module-title">
+              <span>Module 08</span>
+              Final Roadmap
+            </button>
+
+            <div class="chapter-items">
+
+              <button class="chapter-item" data-video="/videos/foundation/module-08-chapter-01.mp4" data-title="Trading Journal" data-meta="Module 08 · Chapter 01">
+                <span>○</span>
+                Trading Journal
+              </button>
+
+              <button class="chapter-item" data-video="/videos/foundation/module-08-chapter-02.mp4" data-title="Practice Framework" data-meta="Module 08 · Chapter 02">
+                <span>○</span>
+                Practice Framework
+              </button>
+
+              <button class="chapter-item" data-video="/videos/foundation/module-08-chapter-03.mp4" data-title="Advanced Learning Path" data-meta="Module 08 · Chapter 03">
+                <span>○</span>
+                Advanced Learning Path
+              </button>
+
+              <button class="chapter-item" data-video="/videos/foundation/module-08-chapter-04.mp4" data-title="Program Completion" data-meta="Module 08 · Chapter 04">
+                <span>○</span>
+                Program Completion
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+  </section>
+
+  <section class="foundation-assignments">
+
+    <div class="max-w">
+
+      <div class="sec-eyebrow">Assignments</div>
+
+      <h2 class="sec-title">
+        Practice Work
+      </h2>
+
+      <div class="assignment-grid">
+
+        <div class="assignment-card">
+          <h3>Chart Reading Exercise</h3>
+          <p>Identify candles, timeframes, and basic price movement on real charts.</p>
+          <a href="#" download>Download Assignment</a>
+        </div>
+
+        <div class="assignment-card">
+          <h3>Support Resistance Mapping</h3>
+          <p>Mark important support and resistance zones on selected charts.</p>
+          <a href="#" download>Download Assignment</a>
+        </div>
+
+        <div class="assignment-card">
+          <h3>Risk Reward Planning</h3>
+          <p>Create basic trade plans using stop loss, target, and risk reward.</p>
+          <a href="#" download>Download Assignment</a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="foundation-notes">
+
+    <div class="max-w">
+
+      <div class="sec-eyebrow">Study Material</div>
+
+      <h2 class="sec-title">
+        Download Program Notes
+      </h2>
+
+      <div class="notes-grid">
+
+        <div class="note-card">
+          <h3>Module 01 Notes</h3>
+          <p>Market Foundation PDF</p>
+          <a href="#" download>Download PDF</a>
+        </div>
+
+        <div class="note-card">
+          <h3>Module 02 Notes</h3>
+          <p>Trading Foundation PDF</p>
+          <a href="#" download>Download PDF</a>
+        </div>
+
+        <div class="note-card">
+          <h3>Module 03 Notes</h3>
+          <p>Chart Reading PDF</p>
+          <a href="#" download>Download PDF</a>
+        </div>
+
+        <div class="note-card">
+          <h3>Module 04 Notes</h3>
+          <p>Support Resistance PDF</p>
+          <a href="#" download>Download PDF</a>
+        </div>
+
+        <div class="note-card">
+          <h3>Module 05 Notes</h3>
+          <p>Trend Analysis PDF</p>
+          <a href="#" download>Download PDF</a>
+        </div>
+
+        <div class="note-card">
+          <h3>Module 06 Notes</h3>
+          <p>Risk Management PDF</p>
+          <a href="#" download>Download PDF</a>
+        </div>
+
+        <div class="note-card">
+          <h3>Module 07 Notes</h3>
+          <p>Trading Psychology PDF</p>
+          <a href="#" download>Download PDF</a>
+        </div>
+
+        <div class="note-card">
+          <h3>Module 08 Notes</h3>
+          <p>Final Roadmap PDF</p>
+          <a href="#" download>Download PDF</a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="foundation-certificate">
+
+    <div class="max-w certificate-grid">
+
+      <div class="certificate-content">
+
+        <div class="sec-eyebrow">Certificate</div>
+
+        <h2 class="sec-title">
+          Unlock Your Foundation Certificate
+        </h2>
+
+        <p>
+          Complete all 32 chapters and practice assignments to unlock
+          your SkilledTrader Foundation Program completion certificate.
+        </p>
+
+        <ul>
+          <li>✔ Completion Certificate</li>
+          <li>✔ Assignment Based Learning</li>
+          <li>✔ Resume Friendly</li>
+          <li>✔ LinkedIn Showcase Ready</li>
+        </ul>
+
+      </div>
+
+      <div class="certificate-card locked-certificate">
+
+        <div class="certificate-inner">
+
+          <span>CERTIFICATE OF COMPLETION</span>
+
+          <h3>Foundation Program</h3>
+
+          <p>This certifies that</p>
+
+          <h4>Your Name</h4>
+
+          <p>
+            has successfully completed the SkilledTrader Foundation Program.
+          </p>
+
+          <strong>SkilledTrader</strong>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="foundation-cta">
+
+    <div class="max-w">
+
+      <div class="cta-card">
+
+        <h2>
+          Need Help During Learning?
+        </h2>
+
+        <p>
+          Join the SkilledTrader community and get support while completing your foundation journey.
+        </p>
+
+        <a href="contact.html" class="btn-primary">
+          Contact Mentor
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="footer">
+
+  <div class="footer-inner">
+
+    <div class="footer-logo">
+      <span>ST</span>
+      SkilledTrader
+    </div>
+
+    <p>Learn. Build. Grow.</p>
+
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="courses.html">Courses</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <small>
+      © 2026 SkilledTrader. All rights reserved.
+    </small>
+
+  </div>
+
+</footer>
+
+<script src="/js/main.js"></script>
+<script src="/js/foundation-program.js"></script>
+
+</body>
+</html>
