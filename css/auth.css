@@ -329,3 +329,27 @@ body{
     font-size:2.3rem;
   }
 }
+
+.password-box{
+  position:relative;
+  width:100%;
+}
+
+.password-box input{
+  width:100%;
+  padding-right:50px;
+}
+
+.toggle-password{
+  position:absolute;
+  right:15px;
+  top:50%;
+  transform:translateY(-50%);
+  cursor:pointer;
+  color:#777;
+  z-index:10;
+}
+
+.toggle-password:hover{
+  color:#2E7D5B;
+}
