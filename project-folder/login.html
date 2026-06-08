@@ -33,7 +33,14 @@ FILE: login.html
 
         <input type="email" placeholder="Email Address" required>
 
-        <input type="password" placeholder="Password" required>
+        <div class="password-box">
+        <input
+        type="password"
+        id="loginPassword"
+        placeholder="Password"
+        required>
+        <i class="fa-solid fa-eye toggle-password"data-target="loginPassword"></i>
+        </div>
 
         <button type="submit">Signin</button>
 
@@ -57,7 +64,13 @@ FILE: login.html
 
         <input type="email" placeholder="Email Address" required>
 
-        <input type="password" placeholder="Password" required>
+        <div class="password-box">
+        <input
+        type="password"
+        id="signupPassword"
+        placeholder="Password"
+        required><i class="fa-solid fa-eye toggle-password" data-target="signupPassword"></i>
+        </div>
 
         <button type="submit">Signup</button>
 
