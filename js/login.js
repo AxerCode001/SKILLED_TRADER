@@ -38,75 +38,69 @@ toggleBtn.addEventListener("click", () => {
 
 
 // LOGIN
-loginForm.addEventListener("submit", async (e) => {
+loginForm.addEventListener("submit", (e) => {
+
   e.preventDefault();
 
-  // grab inputs (login form has email then password)
-  const inputs = loginForm.querySelectorAll('input');
-  const email = inputs[0].value.trim();
-  const password = inputs[1].value;
+  localStorage.setItem("loggedIn", "true");
 
-  try {
-    const res = await fetch('/api/auth/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password }),
-    });
+  alert("Login Successful!");
 
-    const body = await res.json();
-
-    if (!res.ok) {
-      const msg = body && body.message ? body.message : 'Login failed';
-      return alert(msg);
-    }
-
-    // store token and user
-    localStorage.setItem('token', body.token);
-    localStorage.setItem('user', JSON.stringify(body.data));
-
-    // compatibility flag
-    localStorage.setItem('loggedIn', 'true');
-
-    window.location.href = 'dashboard.html';
-  } catch (err) {
-    console.error('Login error', err);
-    alert('Login failed. Please try again.');
-  }
+window.location.href = "index.html";
 });
 
 
 // SIGNUP
-signupForm.addEventListener('submit', async (e) => {
+signupForm.addEventListener("submit", (e) => {
+
   e.preventDefault();
 
-  // inputs: name, email, password
-  const inputs = signupForm.querySelectorAll('input');
-  const name = inputs[0].value.trim();
-  const email = inputs[1].value.trim();
-  const password = inputs[2].value;
+  alert("Signup Successful!");
 
-  try {
-    const res = await fetch('/api/auth/register', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, email, password }),
-    });
-    const body = await res.json();
-    if (!res.ok) {
-      const msg = body && body.message ? body.message : 'Signup failed';
-      return alert(msg);
+  signupForm.classList.remove("active-form");
+  loginForm.classList.add("active-form");
+
+  welcomeTitle.innerText = "Welcome Back!";
+  welcomeText.innerText =
+  "Welcome back! We are so happy to have you here.";
+
+  toggleBtn.innerText = "No account yet? Signup.";
+
+  isLogin = true;
+});
+
+/* =========================================
+   SHOW / HIDE PASSWORD
+========================================= */
+
+const toggleButtons =
+document.querySelectorAll(".toggle-password");
+
+toggleButtons.forEach((btn) => {
+
+  btn.addEventListener("click", () => {
+
+    const input =
+    document.getElementById(
+      btn.dataset.target
+    );
+
+    if(input.type === "password"){
+
+      input.type = "text";
+
+      btn.classList.remove("fa-eye");
+      btn.classList.add("fa-eye-slash");
+
+    }else{
+
+      input.type = "password";
+
+      btn.classList.remove("fa-eye-slash");
+      btn.classList.add("fa-eye");
+
     }
 
-    alert('Signup successful — you can now sign in.');
-    signupForm.reset();
-    signupForm.classList.remove('active-form');
-    loginForm.classList.add('active-form');
-    welcomeTitle.innerText = 'Welcome Back!';
-    welcomeText.innerText = 'Welcome back! We are so happy to have you here.';
-    toggleBtn.innerText = 'No account yet? Signup.';
-    isLogin = true;
-  } catch (err) {
-    console.error('Signup error', err);
-    alert('Signup failed. Please try again.');
-  }
+  });
+
 });
